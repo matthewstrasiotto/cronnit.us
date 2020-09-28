@@ -37,9 +37,8 @@
   width: 1.2rem;
   }
 
-/* space is tight at:
- *  * Viewports < "large phones" ( 425px), &
- *  * exactly the md viewport, 
+/* space is tight at some viewports:
+ * (Described next to queries)
  *
  * * To display both the picker & the date, 
  *   remove the date's padding, 
@@ -48,8 +47,8 @@
  *    moving it right
  *   reduce the picker's size a bit
  * */
-@media (max-width: 424.98px),
-       (min-width: 768px) and (max-width: 991.98px) {
+@media (max-width: 424.98px), /* Smaller than "large phone */
+       (min-width: 768px) and (max-width: 991.98px) { /* Exactly bootstraps "md" */
   .inline-date {
     padding-left: 0;
     z-index: -2;
