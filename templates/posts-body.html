@@ -23,7 +23,7 @@
             <div name="subreddit" class="col-12 col-md-5 pl-2 card-text">{{ post.subreddit }}</div>
             <div name="title"     class="col-12 col-md-7 pl-2 card-text"><a href="/edit?id={{ post.id }}">{{ post.title }}</a></div>
           </div>
-          <div name="whens" class="col-4 col-md-6 row no-gutters">
+          <div name="whens" class="col-4 col-md-6 row no-gutters align-content-start">
             <div name="whendate"  class="col-12 col-md-4 pl-2 card-text">{{ post.when | date("d/m/Y", timezone=post.whenzone) }}</div>
             <div name="whentime"  class="col-12 col-md-4 pl-2 card-text">{{ post.when | date("g:ia", timezone=post.whenzone) }}</div> 
             <div name="whenzone"  class="col-12 col-md-4 pl-2 card-text">{{ post.when | date("T", timezone=post.whenzone) }}</div>
