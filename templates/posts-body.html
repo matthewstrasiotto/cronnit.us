@@ -29,13 +29,7 @@
             <div name="whenzone"  class="col-12 col-md-4 pl-2 card-text">{{ post.when | date("T", timezone=post.whenzone) }}</div>
           </div>
           <div name="status" class="col-1 pl-1 px-md-auto text-center">
-            {% if post.error %}
-            <i class="fas fa-xs fa-exclamation-triangle text-danger"></i>
-            {% elseif post.url is empty %}
-            <i class="far fa-xs fa-clock text-muted"></i>
-            {% else %}
-            <i class="fa fa-xs fa-check text-muted"></i>
-            {% endif %}
+            {% embed "error_icons.html" with {post: post} only %}{% endembed %}
           </div>
         </div>
       {% endfor %}
